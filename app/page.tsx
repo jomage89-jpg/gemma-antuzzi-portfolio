@@ -1,57 +1,41 @@
 const projects = [
   {
-    number: '01',
     title: 'Prompt: Melting',
-    year: '2025',
     fields: 'IA · video · flipbook · installazione',
     description:
       'Un video generato a partire da fotografie dell’artista viene degradato e trasformato in una sequenza bicromatica. Il lavoro passa dallo schermo a due dispositivi fisici: una proiezione su carta e un flipbook che rende la visione manuale, rapida e instabile.',
-    image: '/images/prompt-installazione.png',
-    alt: 'Documentazione dell’installazione Prompt: Melting',
     tone: 'dark',
   },
   {
-    number: '02',
     title: 'BratGreen',
-    year: '2024',
     fields: 'Ambiente digitale · animazione 2D · interazione',
     description:
       'Illustrazione interattiva in HTML composta da quattro gatti animati frame by frame. Il clic su ogni personaggio attiva movimento e musica: senza la presenza dell’utente la composizione resta statica e incompleta.',
-    image: '/images/bratgreen-animation.jpg',
-    alt: 'Frame di animazione dei personaggi di BratGreen',
     tone: 'green',
   },
   {
-    number: '03',
     title: 'Di Passaggio',
-    year: 'In sviluppo',
     fields: 'Installazione interattiva · elettronica · spazio',
     description:
       'Un sistema di LED e materiali riflettenti rileva la presenza umana e la traduce in una risposta luminosa. Lo spettatore entra così nel funzionamento dell’opera e rende visibile il proprio passaggio nello spazio.',
     tone: 'silver',
   },
   {
-    number: '04',
     title: 'Negligenza a circuito chiuso',
-    year: 'Ricerca editoriale',
     fields: 'Google Street View · found imagery · libro d’artista',
     description:
       'Una ricerca dentro Google Street View raccoglie anomalie e incoerenze dell’anonimizzazione. Le immagini diventano un libro di frammenti che il lettore deve ricomporre, interrogando il confine tra mappatura, sorveglianza ed esposizione.',
     tone: 'paper',
   },
   {
-    number: '05',
     title: 'In Palestra',
-    year: '2025',
     fields: 'Interviste · video · social media · documentazione',
     description:
-      'Progetto in collaborazione tra Museo Novecento e Accademia di Belle Arti di Firenze. Cura dei contenuti social, interviste agli artisti e documentazione del processo espositivo attraverso video, documentario e meta-documentario.',
+      'Progetto in collaborazione tra Museo Novecento e Accademia di Belle Arti di Firenze, presentato a Expo 2025 Osaka e a Lo schermo dell’arte di Firenze. Cura dei contenuti social, interviste agli artisti e documentazione attraverso video, documentario e meta-documentario.',
     tone: 'blue',
   },
   {
-    number: '06',
     title: 'Interferenze Elettriche',
-    year: '2025–2026',
     fields: 'Comunicazione · interviste · social media management',
     description:
       'Supporto alla produzione, alla documentazione e alla comunicazione del progetto. Nella seconda edizione, il lavoro comprende anche la presentazione dell’installazione Prompt: Melting.',
@@ -77,7 +61,6 @@ const software = [
   'Illustrator',
   'Toon Boom Harmony',
   'Procreate',
-  'Resolume Arena',
   'Tumult Hype',
 ];
 
@@ -89,58 +72,28 @@ export default function Home() {
           Gemma Antuzzi
         </a>
         <nav aria-label="Navigazione principale">
-          <a href="#work">Work</a>
           <a href="#cv">CV</a>
+          <a href="#work">Work</a>
           <a href="#contact">Contatti</a>
         </nav>
       </header>
 
       <section className="hero" aria-labelledby="hero-title">
-        <p className="eyebrow">Portfolio / CV · 2026</p>
+        <p className="eyebrow">Portfolio / CV · 2026 · Work in progress</p>
         <h1 id="hero-title">
-          Visual &amp;<br />Multimedia Designer
+          Gemma<br />Antuzzi
         </h1>
+        <p className="hero-role">Visual &amp; Multimedia Designer</p>
         <p className="intro">
           Progetto immagini, video e contenuti digitali tra comunicazione,
           animazione e sperimentazione con le tecnologie contemporanee.
         </p>
-        <a className="scroll-link" href="#work">Scopri i lavori ↓</a>
-      </section>
-
-      <section className="work-section" id="work" aria-labelledby="work-title">
-        <div className="section-heading">
-          <p className="eyebrow">01 — Selected Work</p>
-          <h2 id="work-title">Lavori selezionati</h2>
-          <p>Progetti artistici, digitali e culturali raccontati attraverso processo, ruolo e strumenti.</p>
-        </div>
-
-        <div className="projects">
-          {projects.map((project) => (
-            <article className={`project project-${project.tone}`} key={project.number}>
-              <div className="project-visual">
-                {project.image ? (
-                  <img src={project.image} alt={project.alt} />
-                ) : (
-                  <div className="project-number" aria-hidden="true">{project.number}</div>
-                )}
-              </div>
-              <div className="project-copy">
-                <div className="project-meta">
-                  <span>{project.number}</span>
-                  <span>{project.year}</span>
-                </div>
-                <h3>{project.title}</h3>
-                <p className="project-fields">{project.fields}</p>
-                <p className="project-description">{project.description}</p>
-              </div>
-            </article>
-          ))}
-        </div>
+        <a className="scroll-link" href="#cv">Vai al CV ↓</a>
       </section>
 
       <section className="cv-section" id="cv" aria-labelledby="cv-title">
         <div className="section-heading cv-heading">
-          <p className="eyebrow">02 — CV</p>
+          <p className="eyebrow">CV</p>
           <h2 id="cv-title">Esperienza, formazione<br />e competenze.</h2>
           <a className="download-link" href="/files/gemma-antuzzi-cv.pdf" download>
             Scarica il CV PDF ↘
@@ -172,9 +125,21 @@ export default function Home() {
           <div className="cv-block">
             <h3>Formazione</h3>
             <div className="cv-entry split-entry"><span>2022–2027</span><div><h4>Accademia di Belle Arti di Firenze</h4><p>Nuove Tecnologie dell’Arte; 2026–2027 dedicato alla tesi.</p></div></div>
-            <div className="cv-entry split-entry"><span>2022–2026</span><div><h4>Nemo Academy</h4><p>Corso di Cinema d’animazione.</p></div></div>
-            <div className="cv-entry split-entry"><span>2017–2022</span><div><h4>Liceo Artistico, Montevarchi</h4><p>Indirizzo audiovisivo-multimediale.</p></div></div>
-            <div className="cv-entry split-entry"><span>Anno da inserire</span><div><h4>Movimenti Digitali, Prato</h4><p>Corsi base e avanzato di stop motion; esperienza formativa con Monica Fibbi e Stefano Argentero.</p></div></div>
+            <div className="cv-entry split-entry"><span>2022–2026</span><div><h4>Nemo Academy</h4><p>Corso di Cinema d’animazione · valutazione finale 29/30.</p></div></div>
+            <div className="cv-entry split-entry"><span>2017–2022</span><div><h4>ISIS Benedetto Varchi, Montevarchi</h4><p>Liceo Artistico, indirizzo audiovisivo-multimediale · diploma 90/100.</p></div></div>
+            <div className="cv-entry split-entry"><span>Estate 2026</span><div><h4>Movimenti Digitali</h4><p>Corsi base e avanzato di stop motion presso ISIS Benedetto Varchi, Montevarchi; esperienza formativa con Monica Fibbi e Stefano Argentero.</p></div></div>
+          </div>
+
+          <div className="cv-block">
+            <h3>Progetti culturali</h3>
+            <div className="cv-entry">
+              <h4>In Palestra / Museo Novecento</h4>
+              <p>Interviste, documentazione, social media, documentario e meta-documentario. Il progetto è stato presentato a Expo 2025 Osaka e a Lo schermo dell’arte di Firenze.</p>
+            </div>
+            <div className="cv-entry">
+              <h4>Interferenze Elettriche</h4>
+              <p>Comunicazione, interviste e social media management; presentazione di Prompt: Melting nella seconda edizione.</p>
+            </div>
           </div>
 
           <div className="cv-block">
@@ -194,13 +159,43 @@ export default function Home() {
           <div className="cv-block cv-languages">
             <h3>Lingue</h3>
             <div><span>Italiano</span><strong>Madrelingua</strong></div>
-            <div><span>Inglese</span><strong>B2 — certificato</strong></div>
+            <div><span>Inglese</span><strong>B2 Cambridge — certificato</strong></div>
           </div>
         </div>
       </section>
 
+      <section className="work-section" id="work" aria-labelledby="work-title">
+        <div className="section-heading">
+          <p className="eyebrow">Selected Work</p>
+          <h2 id="work-title">Lavori selezionati</h2>
+          <p>Passa sopra un progetto — oppure toccalo — per leggere la descrizione.</p>
+        </div>
+
+        <div className="projects">
+          {projects.map((project) => (
+            <article
+              className={`project project-${project.tone}`}
+              key={project.title}
+              tabIndex={0}
+              aria-label={`${project.title}. ${project.fields}. ${project.description}`}
+            >
+              <div className="project-summary">
+                <h3>{project.title}</h3>
+                <p className="project-fields">{project.fields}</p>
+              </div>
+              <p className="project-description">{project.description}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <aside className="wip-note" aria-label="Stato del portfolio">
+        <span>Work in progress</span>
+        <p>Questo portfolio è in aggiornamento: testi e documentazione dei progetti potranno cambiare nella versione definitiva.</p>
+      </aside>
+
       <section className="contact-section" id="contact" aria-labelledby="contact-title">
-        <p className="eyebrow">03 — Contatti</p>
+        <p className="eyebrow">Contatti</p>
         <h2 id="contact-title">Parliamone.</h2>
         <div className="contact-grid">
           <p>Disponibile per collaborazioni, progetti culturali e opportunità in ambito visual, video e comunicazione digitale.</p>
