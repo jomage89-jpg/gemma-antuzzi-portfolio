@@ -72,6 +72,10 @@ nav a:hover, nav a:focus-visible, footer a:hover, footer a:focus-visible { text-
 .section-heading > p:last-child { margin: 0; max-width: 24rem; font-size: .96rem; line-height: 1.4; }
 
 .projects { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.work-progress { display: grid; grid-template-columns: minmax(10rem, 1fr) 2fr 1fr; gap: .7rem 2rem; margin: -1.5rem 0 3rem; }
+.work-progress span, .work-progress p { grid-column: 2; }
+.work-progress span { font-size: .68rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.work-progress p { max-width: 40rem; margin: 0; color: var(--muted); font-size: .92rem; line-height: 1.45; }
 .project {
   position: relative;
   min-width: 0;
@@ -140,12 +144,10 @@ nav a:hover, nav a:focus-visible, footer a:hover, footer a:focus-visible { text-
 .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
 .contact-grid > p { max-width: 32rem; margin: 0; font-size: 1.25rem; line-height: 1.35; }
 .contact-links { display: flex; flex-direction: column; align-items: flex-start; gap: 1rem; }
-.contact-links a { padding-bottom: .25rem; border-bottom: 1px solid; font-size: clamp(1.25rem, 2.5vw, 2.5rem); letter-spacing: -.03em; }
+.contact-primary { padding-bottom: .25rem; border-bottom: 1px solid; font-size: clamp(1.25rem, 2.5vw, 2.5rem); letter-spacing: -.03em; }
 .contact-links span { font-size: .88rem; }
-.pending-link { color: var(--muted); }
-.wip-note { display: grid; grid-template-columns: 1fr 3fr; gap: 2rem; padding: 2rem 3vw; border-bottom: 1px solid var(--line); background: var(--green); }
-.wip-note span { font-size: .68rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
-.wip-note p { max-width: 50rem; margin: 0; font-size: 1rem; line-height: 1.4; }
+.social-links { display: flex; flex-wrap: wrap; gap: .7rem 1.4rem; margin-top: .5rem; }
+.social-links a { padding-bottom: .2rem; border-bottom: 1px solid; font-size: .86rem; }
 footer { display: flex; justify-content: space-between; gap: 2rem; padding: 2rem 3vw; border-top: 1px solid var(--line); font-size: .78rem; }
 footer p { margin: 0; }
 
@@ -167,7 +169,8 @@ footer p { margin: 0; }
   .cv-profile { grid-column: auto; display: block; }
   .cv-block, .cv-block:nth-child(odd):not(.cv-profile) { min-height: auto; padding: 2rem 0 3rem; border-left: 0; }
   .cv-profile p { font-size: 1.35rem; }
-  .wip-note { grid-template-columns: 1fr; padding: 2rem 1.1rem; }
+  .work-progress { display: block; margin: -1rem 0 2.5rem; }
+  .work-progress p { margin-top: .65rem; }
   .contact-section h2 { margin-bottom: 5rem; }
   .contact-grid { grid-template-columns: 1fr; }
   footer { padding-inline: 1.1rem; }

@@ -59,6 +59,7 @@ const software = [
   'Premiere Pro',
   'Photoshop',
   'Illustrator',
+  'Figma',
   'Toon Boom Harmony',
   'Procreate',
   'Tumult Hype',
@@ -127,7 +128,7 @@ export default function Home() {
             <div className="cv-entry split-entry"><span>2022–2027</span><div><h4>Accademia di Belle Arti di Firenze</h4><p>Nuove Tecnologie dell’Arte; 2026–2027 dedicato alla tesi.</p></div></div>
             <div className="cv-entry split-entry"><span>2022–2026</span><div><h4>Nemo Academy</h4><p>Corso di Cinema d’animazione · valutazione finale 29/30.</p></div></div>
             <div className="cv-entry split-entry"><span>2017–2022</span><div><h4>ISIS Benedetto Varchi, Montevarchi</h4><p>Liceo Artistico, indirizzo audiovisivo-multimediale · diploma 90/100.</p></div></div>
-            <div className="cv-entry split-entry"><span>Estate 2026</span><div><h4>Movimenti Digitali</h4><p>Corsi base e avanzato di stop motion presso ISIS Benedetto Varchi, Montevarchi; esperienza formativa con Monica Fibbi e Stefano Argentero.</p></div></div>
+            <div className="cv-entry split-entry"><span>Estate 2026</span><div><h4>Movimenti Digitali, Prato</h4><p>Corsi base e avanzato di stop motion; esperienza formativa con Monica Fibbi e Stefano Argentero.</p></div></div>
           </div>
 
           <div className="cv-block">
@@ -168,7 +169,11 @@ export default function Home() {
         <div className="section-heading">
           <p className="eyebrow">Selected Work</p>
           <h2 id="work-title">Lavori selezionati</h2>
-          <p>Passa sopra un progetto — oppure toccalo — per leggere la descrizione.</p>
+        </div>
+
+        <div className="work-progress">
+          <span>Work in progress</span>
+          <p>Questa sezione è in aggiornamento: testi e documentazione dei progetti potranno cambiare nella versione definitiva.</p>
         </div>
 
         <div className="projects">
@@ -189,20 +194,18 @@ export default function Home() {
         </div>
       </section>
 
-      <aside className="wip-note" aria-label="Stato del portfolio">
-        <span>Work in progress</span>
-        <p>Questo portfolio è in aggiornamento: testi e documentazione dei progetti potranno cambiare nella versione definitiva.</p>
-      </aside>
-
       <section className="contact-section" id="contact" aria-labelledby="contact-title">
         <p className="eyebrow">Contatti</p>
         <h2 id="contact-title">Parliamone.</h2>
         <div className="contact-grid">
           <p>Disponibile per collaborazioni, progetti culturali e opportunità in ambito visual, video e comunicazione digitale.</p>
           <div className="contact-links">
-            <a href="mailto:gemmaantuzzi@gmail.com">gemmaantuzzi@gmail.com ↗</a>
+            <a className="contact-primary" href="mailto:gemmaantuzzi@gmail.com">gemmaantuzzi@gmail.com ↗</a>
             <span>Firenze / Toscana</span>
-            <span className="pending-link">LinkedIn / Instagram — da inserire</span>
+            <div className="social-links">
+              <a href="https://www.linkedin.com/in/gemma-antuzzi-71831925a" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+              <a href="https://www.instagram.com/gemntz?stkn=MTZiNTVhenl1eGdzMQ%3D%3D&utm_source=qr" target="_blank" rel="noreferrer">Instagram @gemntz ↗</a>
+            </div>
           </div>
         </div>
       </section>
