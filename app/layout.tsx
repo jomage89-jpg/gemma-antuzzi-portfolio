@@ -4,7 +4,7 @@ import './globals.css';
 export const metadata: Metadata = {
   title: 'Gemma Antuzzi — Visual & Multimedia Designer',
   description: 'Portfolio e CV di Gemma Antuzzi: visual design, video, animazione e progetti multimediali.',
-  metadataBase: new URL('https://gemma-antuzzi-portfolio.flowy-aphid-6587.chatgpt.site'),
+  metadataBase: new URL('https://gemma-antuzzi-portfolio.jomage.chatgpt.site'),
   openGraph: {
     title: 'Gemma Antuzzi — Visual & Multimedia Designer',
     description: 'Portfolio e CV: visual design, video, animazione e progetti multimediali.',

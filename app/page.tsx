@@ -231,10 +231,10 @@ export default function Home() {
           <p>Disponibile per collaborazioni, progetti culturali e opportunità in ambito visual, video e comunicazione digitale.</p>
           <div className="contact-links">
             <a className="contact-primary" href="mailto:gemmaantuzzi@gmail.com">gemmaantuzzi@gmail.com ↗</a>
-            <span>Firenze / Toscana</span>
+            <span>Valdarno / Toscana</span>
             <div className="social-links">
-              <a href="https://www.linkedin.com/in/gemma-antuzzi-71831925a" target="_blank" rel="noreferrer">LinkedIn ↗</a>
-              <a href="https://www.instagram.com/gemntz?stkn=MTZiNTVhenl1eGdzMQ%3D%3D&utm_source=qr" target="_blank" rel="noreferrer">Instagram @gemntz ↗</a>
+              <a href="https://www.linkedin.com/in/gemma-antuzzi-71831925a" target="_blank" rel="noreferrer">LinkedIn — Gemma Antuzzi ↗</a>
+              <a href="https://www.instagram.com/gemntz?stkn=MTZiNTVhenl1eGdzMQ%3D%3D&utm_source=qr" target="_blank" rel="noreferrer">Instagram — @gemntz ↗</a>
             </div>
           </div>
         </div>
