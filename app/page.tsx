@@ -4,6 +4,7 @@ const projects = [
     fields: 'IA · video · flipbook · installazione',
     description:
       'Un video generato a partire da fotografie dell’artista viene degradato e trasformato in una sequenza bicromatica. Il lavoro passa dallo schermo a due dispositivi fisici: una proiezione su carta e un flipbook che rende la visione manuale, rapida e instabile.',
+    media: '/media/prompt-melting.mp4',
     tone: 'dark',
   },
   {
@@ -11,6 +12,7 @@ const projects = [
     fields: 'Ambiente digitale · animazione 2D · interazione',
     description:
       'Illustrazione interattiva in HTML composta da quattro gatti animati frame by frame. Il clic su ogni personaggio attiva movimento e musica: senza la presenza dell’utente la composizione resta statica e incompleta.',
+    media: '/media/bratgreen.mp4',
     tone: 'green',
   },
   {
@@ -18,6 +20,7 @@ const projects = [
     fields: 'Installazione interattiva · elettronica · spazio',
     description:
       'Un sistema di LED e materiali riflettenti rileva la presenza umana e la traduce in una risposta luminosa. Lo spettatore entra così nel funzionamento dell’opera e rende visibile il proprio passaggio nello spazio.',
+    media: '/media/di-passaggio.mp4',
     tone: 'metal',
   },
   {
@@ -25,21 +28,8 @@ const projects = [
     fields: 'Google Street View · found imagery · libro d’artista',
     description:
       'Una ricerca dentro Google Street View raccoglie anomalie e incoerenze dell’anonimizzazione. Le immagini diventano un libro di frammenti che il lettore deve ricomporre, interrogando il confine tra mappatura, sorveglianza ed esposizione.',
+    media: '/media/negligenza.mp4',
     tone: 'paper',
-  },
-  {
-    title: 'IMPALESTRA',
-    fields: 'Interviste · video · social media · documentazione',
-    description:
-      'Progetto in collaborazione tra Museo Novecento e Accademia di Belle Arti di Firenze, presentato a Expo 2025 Osaka e a Lo schermo dell’arte di Firenze. Cura dei contenuti social, interviste agli artisti e documentazione attraverso video, documentario e meta-documentario.',
-    tone: 'ochre',
-  },
-  {
-    title: 'Interferenze Elettriche',
-    fields: 'Comunicazione · interviste · social media management',
-    description:
-      'Supporto alla produzione, alla documentazione e alla comunicazione del progetto. Nella seconda edizione, il lavoro comprende anche la presentazione dell’installazione Prompt: Melting.',
-    tone: 'electric',
   },
 ];
 
@@ -55,6 +45,7 @@ const skills = [
 
 // Questo elenco è volutamente semplice da modificare quando Gemma vorrà aggiornarlo.
 const software = [
+  'Adobe Creative Cloud · conoscenza operativa della suite',
   'After Effects',
   'Premiere Pro',
   'Photoshop',
@@ -89,7 +80,6 @@ export default function Home() {
           Progetto immagini, video e contenuti digitali tra comunicazione,
           animazione e sperimentazione con le tecnologie contemporanee.
         </p>
-        <a className="scroll-link" href="#cv">Vai al CV ↓</a>
       </section>
 
       <section className="cv-section" id="cv" aria-labelledby="cv-title">
@@ -214,6 +204,18 @@ export default function Home() {
               tabIndex={0}
               aria-label={`${project.title}. ${project.fields}. ${project.description}`}
             >
+              <video
+                className="project-media"
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+                aria-hidden="true"
+                tabIndex={-1}
+              >
+                <source src={project.media} type="video/mp4" />
+              </video>
               <div className="project-summary">
                 <h3>{project.title}</h3>
                 <p className="project-fields">{project.fields}</p>
