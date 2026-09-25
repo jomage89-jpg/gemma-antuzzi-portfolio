@@ -14,6 +14,7 @@
 html { scroll-behavior: smooth; }
 body {
   margin: 0;
+  overflow-x: hidden;
   background: var(--paper);
   color: var(--ink);
   font-family: Arial, Helvetica, sans-serif;
@@ -59,6 +60,12 @@ nav a:hover, nav a:focus-visible, footer a:hover, footer a:focus-visible { text-
   letter-spacing: -.075em;
   font-weight: 500;
 }
+.hero-name-lockup {
+  position: relative;
+  grid-column: 1 / -1;
+  isolation: isolate;
+}
+.hero-name-lockup h1 { position: relative; z-index: 2; }
 .hero-role { grid-column: 1 / -1; margin: .6rem 0 0; font-size: clamp(1.5rem, 3vw, 3.2rem); line-height: 1; letter-spacing: -.04em; }
 .intro { grid-column: 2; max-width: 42rem; margin: 2rem 0 0 auto; font-size: clamp(1.15rem, 2vw, 2rem); line-height: 1.13; letter-spacing: -.03em; }
 .work-section, .cv-section { padding: 8rem 3vw; border-bottom: 1px solid var(--line); }
@@ -78,8 +85,8 @@ nav a:hover, nav a:focus-visible, footer a:hover, footer a:focus-visible { text-
   justify-content: space-between;
   align-items: center;
   gap: 1rem 3rem;
-  margin: -1.5rem 0 3rem;
-  padding: 1rem 1.2rem;
+  margin: -1.5rem -3vw 3rem;
+  padding: 1rem 3vw;
   background: var(--green);
   color: #171715;
 }
@@ -142,6 +149,8 @@ nav a:hover, nav a:focus-visible, footer a:hover, footer a:focus-visible { text-
 
 .cv-section { background: #11110f; color: #f4f2eb; }
 .cv-heading { grid-template-columns: minmax(10rem, 1fr) 2fr 1fr; }
+.cv-title-lockup, .work-title-lockup, .contact-title-lockup { position: relative; isolation: isolate; }
+.cv-title-lockup h2, .work-title-lockup h2, .contact-title-lockup h2 { position: relative; z-index: 2; }
 .download-link { justify-self: end; padding-bottom: .35rem; border-bottom: 1px solid currentColor; font-size: .82rem; }
 .cv-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid #66645e; }
 .cv-block { min-height: 20rem; padding: 2rem 2rem 3rem 0; border-bottom: 1px solid #66645e; }
@@ -210,6 +219,66 @@ nav a:hover, nav a:focus-visible, footer a:hover, footer a:focus-visible { text-
 footer { display: flex; justify-content: space-between; gap: 2rem; padding: 2rem 3vw; border-top: 1px solid var(--line); font-size: .78rem; }
 footer p { margin: 0; }
 
+/* I doodle conservano il tratto originale; il nero scompare sul fondo tramite screen. */
+.doodle-crop {
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
+.doodle-crop img {
+  position: absolute;
+  display: block;
+  max-width: none;
+  height: auto;
+  mix-blend-mode: screen;
+}
+.doodle-name {
+  top: 48%;
+  left: 44%;
+  z-index: 1;
+  width: min(82vw, 78rem);
+  aspect-ratio: 1868 / 1722;
+  transform: translate(-50%, -50%);
+  opacity: .82;
+}
+.doodle-name img { top: -2.56%; left: -4.39%; width: 109.64%; }
+.doodle-underline-target { position: relative; display: inline-block; }
+.doodle-underline {
+  left: 0;
+  bottom: -.22em;
+  z-index: 3;
+  width: 100%;
+  aspect-ratio: 1630 / 44;
+}
+.doodle-underline img { top: -1972.7%; left: -8.65%; width: 117.79%; }
+.doodle-stars {
+  top: -2.4rem;
+  right: -3.3rem;
+  z-index: 3;
+  width: clamp(4rem, 7vw, 7rem);
+  aspect-ratio: 496 / 389;
+}
+.doodle-stars img { top: -157.84%; left: -180.85%; width: 412.9%; }
+.doodle-cv-line {
+  top: -.2rem;
+  left: -1.8rem;
+  z-index: 3;
+  width: .55rem;
+  aspect-ratio: 42 / 1323;
+}
+.doodle-cv-line img { top: -24.79%; left: -1176.19%; width: 4876.19%; }
+.doodle-contact-arrow {
+  top: 47%;
+  right: 18%;
+  z-index: 3;
+  width: clamp(8rem, 15vw, 15rem);
+  aspect-ratio: 873 / 1031;
+  transform: rotate(-8deg);
+}
+.doodle-contact-arrow img { top: -28.42%; left: -82.25%; width: 234.59%; }
+
 @media (max-width: 820px) {
   .site-header { padding-inline: 1.1rem; }
   nav { gap: 1rem; }
@@ -228,10 +297,14 @@ footer p { margin: 0; }
   .cv-profile { grid-column: auto; display: block; }
   .cv-block, .cv-block:nth-child(odd):not(.cv-profile) { min-height: auto; padding: 2rem 0 3rem; border-left: 0; }
   .cv-profile p { font-size: 1.35rem; }
-  .work-progress { display: block; margin: -1rem 0 2.5rem; }
+  .work-progress { display: block; margin: -1rem -1.1rem 2.5rem; padding: 1rem 1.1rem; }
   .work-progress p { margin-top: .65rem; }
   .contact-section h2 { margin-bottom: 5rem; }
   .contact-grid { grid-template-columns: 1fr; }
+  .doodle-name { top: 50%; left: 48%; width: 112vw; opacity: .76; }
+  .doodle-stars { top: 1rem; right: -.7rem; width: 4rem; }
+  .doodle-cv-line { top: 2.1rem; left: -.8rem; width: .35rem; }
+  .doodle-contact-arrow { top: 55%; right: .5rem; width: 7rem; transform: rotate(8deg); }
   footer { padding-inline: 1.1rem; }
 }
 

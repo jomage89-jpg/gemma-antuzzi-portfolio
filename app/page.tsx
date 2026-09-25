@@ -71,10 +71,22 @@ export default function Home() {
 
       <section className="hero" aria-labelledby="hero-title">
         <p className="eyebrow">Portfolio / CV · 2026 · Work in progress</p>
-        <h1 id="hero-title">
-          Gemma<br />Antuzzi
-        </h1>
-        <p className="hero-role">Visual &amp; Multimedia Designer</p>
+        <div className="hero-name-lockup">
+          <span className="doodle-crop doodle-name" aria-hidden="true">
+            <img src="/doodles/name-frame.png" alt="" />
+          </span>
+          <h1 id="hero-title">
+            Gemma<br />Antuzzi
+          </h1>
+        </div>
+        <p className="hero-role">
+          <span className="doodle-underline-target">
+            Visual &amp; Multimedia Designer
+            <span className="doodle-crop doodle-underline" aria-hidden="true">
+              <img src="/doodles/underline.png" alt="" />
+            </span>
+          </span>
+        </p>
         <p className="intro">
           Progetto immagini, video e contenuti digitali tra comunicazione,
           animazione e sperimentazione con le tecnologie contemporanee.
@@ -84,7 +96,12 @@ export default function Home() {
       <section className="cv-section" id="cv" aria-labelledby="cv-title">
         <div className="section-heading cv-heading">
           <p className="eyebrow">CV</p>
-          <h2 id="cv-title">Esperienza, formazione<br />e competenze.</h2>
+          <div className="cv-title-lockup">
+            <span className="doodle-crop doodle-cv-line" aria-hidden="true">
+              <img src="/doodles/cv-line.png" alt="" />
+            </span>
+            <h2 id="cv-title">Esperienza, formazione<br />e competenze.</h2>
+          </div>
           <a className="download-link" href="/files/gemma-antuzzi-cv.pdf" download>
             Scarica il CV PDF ↘
           </a>
@@ -188,7 +205,19 @@ export default function Home() {
       <section className="work-section" id="work" aria-labelledby="work-title">
         <div className="section-heading">
           <p className="eyebrow">Selected Work</p>
-          <h2 id="work-title">Lavori selezionati</h2>
+          <div className="work-title-lockup">
+            <h2 id="work-title">
+              <span className="doodle-underline-target">
+                Lavori selezionati
+                <span className="doodle-crop doodle-underline" aria-hidden="true">
+                  <img src="/doodles/underline.png" alt="" />
+                </span>
+              </span>
+            </h2>
+            <span className="doodle-crop doodle-stars" aria-hidden="true">
+              <img src="/doodles/stars.png" alt="" />
+            </span>
+          </div>
         </div>
 
         <div className="work-progress">
@@ -228,7 +257,19 @@ export default function Home() {
 
       <section className="contact-section" id="contact" aria-labelledby="contact-title">
         <p className="eyebrow">Contatti</p>
-        <h2 id="contact-title">Contatti.</h2>
+        <div className="contact-title-lockup">
+          <h2 id="contact-title">
+            <span className="doodle-underline-target">
+              Contatti.
+              <span className="doodle-crop doodle-underline" aria-hidden="true">
+                <img src="/doodles/underline.png" alt="" />
+              </span>
+            </span>
+          </h2>
+          <span className="doodle-crop doodle-contact-arrow" aria-hidden="true">
+            <img src="/doodles/contact-arrow.png" alt="" />
+          </span>
+        </div>
         <div className="contact-grid">
           <p>Disponibile per collaborazioni, progetti culturali e opportunità in ambito visual, video e comunicazione digitale.</p>
           <div className="contact-links">
