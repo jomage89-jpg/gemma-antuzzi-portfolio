@@ -45,7 +45,6 @@ const skills = [
 
 // Questo elenco è volutamente semplice da modificare quando Gemma vorrà aggiornarlo.
 const software = [
-  'Adobe Creative Cloud · conoscenza operativa della suite',
   'After Effects',
   'Premiere Pro',
   'Photoshop',
@@ -172,6 +171,7 @@ export default function Home() {
 
           <div className="cv-block">
             <h3>Software</h3>
+            <p className="software-note">Conoscenza operativa generale della Adobe Creative Cloud.</p>
             <ul className="tag-list">
               {software.map((item) => <li key={item}>{item}</li>)}
             </ul>
@@ -192,8 +192,8 @@ export default function Home() {
         </div>
 
         <div className="work-progress">
-          <span>Work in progress</span>
-          <p>Questa sezione è in aggiornamento: testi e documentazione dei progetti potranno cambiare nella versione definitiva.</p>
+          <span>Archivio in evoluzione</span>
+          <p>Nuovi progetti e materiali verranno aggiunti nel tempo.</p>
         </div>
 
         <div className="projects">
@@ -228,7 +228,7 @@ export default function Home() {
 
       <section className="contact-section" id="contact" aria-labelledby="contact-title">
         <p className="eyebrow">Contatti</p>
-        <h2 id="contact-title">Parliamone.</h2>
+        <h2 id="contact-title">Contatti.</h2>
         <div className="contact-grid">
           <p>Disponibile per collaborazioni, progetti culturali e opportunità in ambito visual, video e comunicazione digitale.</p>
           <div className="contact-links">
