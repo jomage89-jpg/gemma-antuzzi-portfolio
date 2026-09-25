@@ -18,7 +18,7 @@ const projects = [
     fields: 'Installazione interattiva · elettronica · spazio',
     description:
       'Un sistema di LED e materiali riflettenti rileva la presenza umana e la traduce in una risposta luminosa. Lo spettatore entra così nel funzionamento dell’opera e rende visibile il proprio passaggio nello spazio.',
-    tone: 'silver',
+    tone: 'cyan',
   },
   {
     title: 'Negligenza a circuito chiuso',
@@ -28,18 +28,18 @@ const projects = [
     tone: 'paper',
   },
   {
-    title: 'In Palestra',
+    title: 'Inpalestra',
     fields: 'Interviste · video · social media · documentazione',
     description:
       'Progetto in collaborazione tra Museo Novecento e Accademia di Belle Arti di Firenze, presentato a Expo 2025 Osaka e a Lo schermo dell’arte di Firenze. Cura dei contenuti social, interviste agli artisti e documentazione attraverso video, documentario e meta-documentario.',
-    tone: 'blue',
+    tone: 'inpalestra',
   },
   {
     title: 'Interferenze Elettriche',
     fields: 'Comunicazione · interviste · social media management',
     description:
       'Supporto alla produzione, alla documentazione e alla comunicazione del progetto. Nella seconda edizione, il lavoro comprende anche la presentazione dell’installazione Prompt: Melting.',
-    tone: 'red',
+    tone: 'neon',
   },
 ];
 
@@ -117,16 +117,34 @@ export default function Home() {
               <h4>Jack Neel</h4>
               <p>Video editing per YouTube e contenuti animati per social media.</p>
             </div>
-            <div className="cv-entry">
+            <a
+              className="cv-entry linked-entry"
+              href="https://youtu.be/1dn-WBYAbF4?si=_dB-rCzujlbjtdvW"
+              target="_blank"
+              rel="noreferrer"
+            >
               <h4>Jonas Blue</h4>
-              <p>Graphic design e visual content per produzione musicale.</p>
-            </div>
+              <p>Grafiche per Jonas Blue, Why Don’t We — Don’t Wake Me Up (Lyric Video).</p>
+              <span className="entry-link">Guarda il lyric video ↗</span>
+            </a>
           </div>
 
           <div className="cv-block">
             <h3>Formazione</h3>
             <div className="cv-entry split-entry"><span>2022–2027</span><div><h4>Accademia di Belle Arti di Firenze</h4><p>Nuove Tecnologie dell’Arte; 2026–2027 dedicato alla tesi.</p></div></div>
-            <div className="cv-entry split-entry"><span>2022–2026</span><div><h4>Nemo Academy</h4><p>Corso di Cinema d’animazione · valutazione finale 29/30.</p></div></div>
+            <a
+              className="cv-entry split-entry linked-entry"
+              href="https://vimeo.com/1230265176?fl=pl&fe=sh"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span>2022–2026</span>
+              <div>
+                <h4>Nemo Academy</h4>
+                <p>Corso di Cinema d’animazione · valutazione finale 29/30.</p>
+                <span className="entry-link">Guarda l’animation reel ↗</span>
+              </div>
+            </a>
             <div className="cv-entry split-entry"><span>2017–2022</span><div><h4>ISIS Benedetto Varchi, Montevarchi</h4><p>Liceo Artistico, indirizzo audiovisivo-multimediale · diploma 90/100.</p></div></div>
             <div className="cv-entry split-entry"><span>Estate 2026</span><div><h4>Movimenti Digitali, Prato</h4><p>Corsi base e avanzato di stop motion; esperienza formativa con Monica Fibbi e Stefano Argentero.</p></div></div>
           </div>
@@ -134,7 +152,7 @@ export default function Home() {
           <div className="cv-block">
             <h3>Progetti culturali</h3>
             <div className="cv-entry">
-              <h4>In Palestra / Museo Novecento</h4>
+              <h4>Inpalestra / Museo Novecento</h4>
               <p>Interviste, documentazione, social media, documentario e meta-documentario. Il progetto è stato presentato a Expo 2025 Osaka e a Lo schermo dell’arte di Firenze.</p>
             </div>
             <div className="cv-entry">
