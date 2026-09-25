@@ -18,7 +18,7 @@ const projects = [
     fields: 'Installazione interattiva · elettronica · spazio',
     description:
       'Un sistema di LED e materiali riflettenti rileva la presenza umana e la traduce in una risposta luminosa. Lo spettatore entra così nel funzionamento dell’opera e rende visibile il proprio passaggio nello spazio.',
-    tone: 'cyan',
+    tone: 'metal',
   },
   {
     title: 'Negligenza a circuito chiuso',
@@ -28,18 +28,18 @@ const projects = [
     tone: 'paper',
   },
   {
-    title: 'Inpalestra',
+    title: 'IMPALESTRA',
     fields: 'Interviste · video · social media · documentazione',
     description:
       'Progetto in collaborazione tra Museo Novecento e Accademia di Belle Arti di Firenze, presentato a Expo 2025 Osaka e a Lo schermo dell’arte di Firenze. Cura dei contenuti social, interviste agli artisti e documentazione attraverso video, documentario e meta-documentario.',
-    tone: 'inpalestra',
+    tone: 'ochre',
   },
   {
     title: 'Interferenze Elettriche',
     fields: 'Comunicazione · interviste · social media management',
     description:
       'Supporto alla produzione, alla documentazione e alla comunicazione del progetto. Nella seconda edizione, il lavoro comprende anche la presentazione dell’installazione Prompt: Melting.',
-    tone: 'neon',
+    tone: 'electric',
   },
 ];
 
@@ -151,14 +151,26 @@ export default function Home() {
 
           <div className="cv-block">
             <h3>Progetti culturali</h3>
-            <div className="cv-entry">
-              <h4>Inpalestra / Museo Novecento</h4>
+            <a
+              className="cv-entry linked-entry"
+              href="https://www.youtube.com/live/xHDToyUlvmA?si=cuGwTwY2IwA52s3I&t=3824s"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <h4>IMPALESTRA tra Museo e Accademia</h4>
               <p>Interviste, documentazione, social media, documentario e meta-documentario. Il progetto è stato presentato a Expo 2025 Osaka e a Lo schermo dell’arte di Firenze.</p>
-            </div>
-            <div className="cv-entry">
+              <span className="entry-link">Guarda il progetto a Expo 2025 Osaka ↗</span>
+            </a>
+            <a
+              className="cv-entry linked-entry"
+              href="https://www.artribune.com/mostre-evento-arte/interferenze-elettriche/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <h4>Interferenze Elettriche</h4>
               <p>Comunicazione, interviste e social media management; presentazione di Prompt: Melting nella seconda edizione.</p>
-            </div>
+              <span className="entry-link">Leggi l’articolo su Artribune ↗</span>
+            </a>
           </div>
 
           <div className="cv-block">
@@ -169,7 +181,7 @@ export default function Home() {
           </div>
 
           <div className="cv-block">
-            <h3>Software <span className="editable">facilmente modificabile</span></h3>
+            <h3>Software</h3>
             <ul className="tag-list">
               {software.map((item) => <li key={item}>{item}</li>)}
             </ul>
