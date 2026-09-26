@@ -239,10 +239,10 @@ footer p { margin: 0; }
   filter: hue-rotate(-24deg) saturate(.94) brightness(.96);
 }
 .doodle-hero-corner {
-  right: clamp(-32rem, -30vw, -15rem);
-  bottom: clamp(-34rem, -32vw, -17rem);
+  top: clamp(-39rem, -38vw, -20rem);
+  right: clamp(-36rem, -32vw, -18rem);
   z-index: 1;
-  width: clamp(32rem, 45vw, 48rem);
+  width: clamp(42rem, 58vw, 62rem);
   aspect-ratio: 1868 / 1722;
 }
 .doodle-hero-corner img {
@@ -276,8 +276,8 @@ footer p { margin: 0; }
 }
 .doodle-cv-line img { top: -24.79%; left: -1176.19%; width: 4876.19%; }
 .doodle-contact-arrow {
-  top: 9%;
-  right: 34%;
+  top: 4%;
+  right: 29%;
   z-index: 3;
   width: clamp(11rem, 18vw, 18rem);
   aspect-ratio: 873 / 1031;
@@ -307,10 +307,10 @@ footer p { margin: 0; }
   .work-progress p { margin-top: .65rem; }
   .contact-section h2 { margin-bottom: 8rem; }
   .contact-grid { grid-template-columns: 1fr; }
-  .doodle-hero-corner { right: -21rem; bottom: -23rem; width: 30rem; }
+  .doodle-hero-corner { top: -25rem; right: -22rem; width: 36rem; }
   .doodle-stars { top: 1rem; right: -.7rem; width: 4rem; }
   .doodle-cv-line { top: 2.1rem; left: -.8rem; width: .35rem; }
-  .doodle-contact-arrow { top: 18%; right: 30%; width: 9rem; transform: rotate(6deg); }
+  .doodle-contact-arrow { top: 14%; right: 24%; width: 9rem; transform: rotate(6deg); }
   footer { padding-inline: 1.1rem; }
 }
 
