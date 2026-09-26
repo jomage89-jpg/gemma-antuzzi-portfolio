@@ -1,5 +1,14 @@
 import type { NextConfig } from 'next';
 
-const nextConfig: NextConfig = {};
+const isGitHubPages = process.env.GITHUB_PAGES === 'true';
+const githubBasePath = '/gemma-antuzzi-portfolio';
+
+const nextConfig: NextConfig = {
+  output: isGitHubPages ? 'export' : undefined,
+  trailingSlash: isGitHubPages,
+  basePath: isGitHubPages ? githubBasePath : '',
+  assetPrefix: isGitHubPages ? githubBasePath : '',
+  images: { unoptimized: true },
+};
 
 export default nextConfig;

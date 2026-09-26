@@ -1,14 +1,20 @@
 import type { Metadata } from 'next';
 import './globals.css';
 
+const isGitHubPages = process.env.GITHUB_PAGES === 'true';
+const publicOrigin = isGitHubPages
+  ? 'https://jomage89-jpg.github.io/gemma-antuzzi-portfolio'
+  : 'https://gemma-antuzzi-portfolio.jomage.chatgpt.site';
+const ogImage = `${publicOrigin}/og.png`;
+
 export const metadata: Metadata = {
   title: 'Gemma Antuzzi — Visual & Multimedia Designer',
   description: 'Portfolio e CV di Gemma Antuzzi: visual design, video, animazione e progetti multimediali.',
-  metadataBase: new URL('https://gemma-antuzzi-portfolio.jomage.chatgpt.site'),
+  metadataBase: new URL(publicOrigin),
   openGraph: {
     title: 'Gemma Antuzzi — Visual & Multimedia Designer',
     description: 'Portfolio e CV: visual design, video, animazione e progetti multimediali.',
-    images: [{ url: '/og.png', width: 1200, height: 630, alt: 'Gemma Antuzzi — Visual & Multimedia Designer' }],
+    images: [{ url: ogImage, width: 1200, height: 630, alt: 'Gemma Antuzzi — Visual & Multimedia Designer' }],
     locale: 'it_IT',
     type: 'website',
   },
@@ -16,7 +22,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Gemma Antuzzi — Visual & Multimedia Designer',
     description: 'Portfolio e CV: visual design, video, animazione e progetti multimediali.',
-    images: ['/og.png'],
+    images: [ogImage],
   },
 };
 

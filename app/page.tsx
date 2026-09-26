@@ -1,10 +1,13 @@
+const publicBasePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
+const asset = (path: string) => `${publicBasePath}${path}`;
+
 const projects = [
   {
     title: 'Prompt: Melting',
     fields: 'IA · video · flipbook · installazione',
     description:
       'Un video generato a partire da fotografie dell’artista viene degradato e trasformato in una sequenza bicromatica. Il lavoro passa dallo schermo a due dispositivi fisici: una proiezione su carta e un flipbook che rende la visione manuale, rapida e instabile.',
-    media: '/media/prompt-melting.mp4',
+    media: asset('/media/prompt-melting.mp4'),
     tone: 'dark',
   },
   {
@@ -12,7 +15,7 @@ const projects = [
     fields: 'Ambiente digitale · animazione 2D · interazione',
     description:
       'Illustrazione interattiva in HTML composta da quattro gatti animati frame by frame. Il clic su ogni personaggio attiva movimento e musica: senza la presenza dell’utente la composizione resta statica e incompleta.',
-    media: '/media/bratgreen.mp4',
+    media: asset('/media/bratgreen.mp4'),
     tone: 'green',
   },
   {
@@ -20,7 +23,7 @@ const projects = [
     fields: 'Installazione interattiva · elettronica · spazio',
     description:
       'Un sistema di LED e materiali riflettenti rileva la presenza umana e la traduce in una risposta luminosa. Lo spettatore entra così nel funzionamento dell’opera e rende visibile il proprio passaggio nello spazio.',
-    media: '/media/di-passaggio.mp4',
+    media: asset('/media/di-passaggio.mp4'),
     tone: 'metal',
   },
   {
@@ -28,7 +31,7 @@ const projects = [
     fields: 'Google Street View · found imagery · libro d’artista',
     description:
       'Una ricerca dentro Google Street View raccoglie anomalie e incoerenze dell’anonimizzazione. Le immagini diventano un libro di frammenti che il lettore deve ricomporre, interrogando il confine tra mappatura, sorveglianza ed esposizione.',
-    media: '/media/negligenza.mp4',
+    media: asset('/media/negligenza.mp4'),
     tone: 'paper',
   },
 ];
@@ -80,7 +83,7 @@ export default function Home() {
           <span className="doodle-underline-target">
             Visual &amp; Multimedia Designer
             <span className="doodle-crop doodle-underline" aria-hidden="true">
-              <img src="/doodles/underline.png" alt="" />
+              <img src={asset('/doodles/underline.png')} alt="" />
             </span>
           </span>
         </p>
@@ -89,7 +92,7 @@ export default function Home() {
           animazione e sperimentazione con le tecnologie contemporanee.
         </p>
         <span className="doodle-crop doodle-hero-corner" aria-hidden="true">
-          <img src="/doodles/name-frame.png" alt="" />
+          <img src={asset('/doodles/name-frame.png')} alt="" />
         </span>
       </section>
 
@@ -98,11 +101,11 @@ export default function Home() {
           <p className="eyebrow">CV</p>
           <div className="cv-title-lockup">
             <span className="doodle-crop doodle-cv-line" aria-hidden="true">
-              <img src="/doodles/cv-line.png" alt="" />
+              <img src={asset('/doodles/cv-line.png')} alt="" />
             </span>
             <h2 id="cv-title">Esperienza, formazione<br />e competenze.</h2>
           </div>
-          <a className="download-link" href="/files/gemma-antuzzi-cv.pdf" download>
+          <a className="download-link" href={asset('/files/gemma-antuzzi-cv.pdf')} download>
             Scarica il CV PDF <span className="text-arrow" aria-hidden="true">↘︎</span>
           </a>
         </div>
@@ -210,12 +213,12 @@ export default function Home() {
               <span className="doodle-underline-target">
                 Lavori selezionati
                 <span className="doodle-crop doodle-underline" aria-hidden="true">
-                  <img src="/doodles/underline.png" alt="" />
+                  <img src={asset('/doodles/underline.png')} alt="" />
                 </span>
               </span>
             </h2>
             <span className="doodle-crop doodle-stars" aria-hidden="true">
-              <img src="/doodles/stars.png" alt="" />
+              <img src={asset('/doodles/stars.png')} alt="" />
             </span>
           </div>
         </div>
@@ -262,12 +265,12 @@ export default function Home() {
             <span className="doodle-underline-target">
               Contatti.
               <span className="doodle-crop doodle-underline" aria-hidden="true">
-                <img src="/doodles/underline.png" alt="" />
+                <img src={asset('/doodles/underline.png')} alt="" />
               </span>
             </span>
           </h2>
           <span className="doodle-crop doodle-contact-arrow" aria-hidden="true">
-            <img src="/doodles/contact-arrow.png" alt="" />
+            <img src={asset('/doodles/contact-arrow.png')} alt="" />
           </span>
         </div>
         <div className="contact-grid">
