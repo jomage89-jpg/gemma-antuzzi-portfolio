@@ -242,6 +242,38 @@ nav a:hover, nav a:focus-visible, footer a:hover, footer a:focus-visible { text-
 .social-links a { padding-bottom: .2rem; border-bottom: 1px solid; font-size: .86rem; }
 footer { display: flex; justify-content: space-between; gap: 2rem; padding: 2rem 3vw; border-top: 1px solid var(--line); font-size: .78rem; }
 footer p { margin: 0; }
+.footer-links { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: .8rem 1.6rem; }
+
+.privacy-page { min-height: calc(100vh - 64px); padding: 8rem 3vw; }
+.privacy-intro {
+  display: grid;
+  grid-template-columns: minmax(10rem, 1fr) 2fr 1fr;
+  gap: 2rem;
+  align-items: start;
+  padding-bottom: 6rem;
+  border-bottom: 1px solid var(--line);
+}
+.privacy-intro h1 {
+  margin: -.08em 0 0;
+  font-size: clamp(4rem, 10vw, 11rem);
+  line-height: .82;
+  letter-spacing: -.075em;
+  font-weight: 500;
+}
+.privacy-updated { justify-self: end; margin: 0; color: var(--muted); font-size: .78rem; line-height: 1.5; }
+.privacy-content { width: min(100%, 72rem); margin: 0 0 0 auto; }
+.privacy-content section {
+  display: grid;
+  grid-template-columns: minmax(12rem, 1fr) 2fr;
+  gap: 2rem;
+  padding: 2.6rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.privacy-content h2 { margin: 0; font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; }
+.privacy-content p { grid-column: 2; max-width: 48rem; margin: 0; color: #bbb9b1; font-size: 1rem; line-height: 1.65; }
+.privacy-content p + p { margin-top: -1rem; }
+.privacy-content a { color: var(--ink); border-bottom: 1px solid #6f6d66; }
+.privacy-content a:hover, .privacy-content a:focus-visible { color: var(--green); border-color: var(--green); }
 
 /* I doodle conservano il tratto originale; il nero scompare sul fondo tramite screen. */
 .doodle-crop {
@@ -335,6 +367,15 @@ footer p { margin: 0; }
   .doodle-cv-line { top: -1.8rem; left: -.8rem; width: .35rem; }
   .doodle-contact-arrow { top: 14%; right: 2%; width: 9rem; transform: rotate(6deg); }
   footer { padding-inline: 1.1rem; }
+  .privacy-page { padding: 5rem 1.1rem; }
+  .privacy-intro { display: block; padding-bottom: 3.5rem; }
+  .privacy-intro h1 { margin: 2.2rem 0 2rem; font-size: clamp(4.4rem, 22vw, 7rem); }
+  .privacy-updated { max-width: 16rem; }
+  .privacy-content { width: 100%; }
+  .privacy-content section { display: block; padding: 2.2rem 0; }
+  .privacy-content h2 { margin-bottom: 1.2rem; }
+  .privacy-content p { font-size: .96rem; }
+  .privacy-content p + p { margin-top: 1.2rem; }
 }
 
 @media (hover: none) {

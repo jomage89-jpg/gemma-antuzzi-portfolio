@@ -288,7 +288,10 @@ export default function Home() {
 
       <footer>
         <p>Gemma Antuzzi © 2026</p>
-        <a href="#top">Torna su <span className="text-arrow" aria-hidden="true">↑︎</span></a>
+        <div className="footer-links">
+          <a href={`${publicBasePath}/privacy/`}>Privacy e cookie</a>
+          <a href="#top">Torna su <span className="text-arrow" aria-hidden="true">↑︎</span></a>
+        </div>
       </footer>
     </main>
   );
