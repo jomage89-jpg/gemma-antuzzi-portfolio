@@ -240,7 +240,7 @@ footer p { margin: 0; }
 }
 .doodle-hero-corner {
   top: clamp(-24rem, -20vw, -10rem);
-  right: clamp(-24rem, -20vw, -11rem);
+  right: calc(clamp(-24rem, -20vw, -11rem) - 18px);
   z-index: 1;
   width: clamp(42rem, 58vw, 62rem);
   aspect-ratio: 1868 / 1722;
