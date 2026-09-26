@@ -72,17 +72,8 @@ export default function Home() {
       <section className="hero" aria-labelledby="hero-title">
         <p className="eyebrow">Portfolio / CV · 2026 · Work in progress</p>
         <div className="hero-name-lockup">
-          <span className="doodle-crop doodle-name" aria-hidden="true">
-            <img src="/doodles/name-frame.png" alt="" />
-          </span>
           <h1 id="hero-title">
             Gemma<br />Antuzzi
-            <span className="hero-title-intersection" aria-hidden="true">
-              Gemma<br />Antuzzi
-            </span>
-            <span className="hero-title-intersection hero-title-intersection-deep" aria-hidden="true">
-              Gemma<br />Antuzzi
-            </span>
           </h1>
         </div>
         <p className="hero-role">
@@ -97,6 +88,9 @@ export default function Home() {
           Progetto immagini, video e contenuti digitali tra comunicazione,
           animazione e sperimentazione con le tecnologie contemporanee.
         </p>
+        <span className="doodle-crop doodle-hero-corner" aria-hidden="true">
+          <img src="/doodles/name-frame.png" alt="" />
+        </span>
       </section>
 
       <section className="cv-section" id="cv" aria-labelledby="cv-title">

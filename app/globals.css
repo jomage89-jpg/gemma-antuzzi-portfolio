@@ -44,12 +44,14 @@ nav { display: flex; gap: 1.7rem; font-size: .82rem; }
 nav a:hover, nav a:focus-visible, footer a:hover, footer a:focus-visible { text-decoration: underline; text-underline-offset: 4px; }
 
 .hero {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 1.5rem 2rem;
   align-items: end;
   min-height: calc(100vh - 64px);
   padding: 8vw 3vw 3vw;
+  overflow: hidden;
   border-bottom: 1px solid var(--line);
   isolation: isolate;
 }
@@ -66,25 +68,7 @@ nav a:hover, nav a:focus-visible, footer a:hover, footer a:focus-visible { text-
   position: relative;
   grid-column: 1 / -1;
 }
-.hero-name-lockup h1 { position: relative; z-index: 4; }
-.hero-title-intersection {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  color: #050504;
-  pointer-events: none;
-  -webkit-mask-image: url('/doodles/name-frame.png');
-  mask-image: url('/doodles/name-frame.png');
-  -webkit-mask-mode: luminance;
-  mask-mode: luminance;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-size: min(74.55vw, 72.36rem) auto;
-  mask-size: min(74.55vw, 72.36rem) auto;
-  -webkit-mask-position: calc(29% - min(36.99vw, 35.9rem)) calc(50% - min(32.95vw, 31.98rem));
-  mask-position: calc(29% - min(36.99vw, 35.9rem)) calc(50% - min(32.95vw, 31.98rem));
-}
-.hero-title-intersection-deep { z-index: 2; }
+.hero-name-lockup h1 { position: relative; z-index: 2; }
 .hero-role { grid-column: 1 / -1; margin: .6rem 0 0; font-size: clamp(1.5rem, 3vw, 3.2rem); line-height: 1; letter-spacing: -.04em; }
 .intro { grid-column: 2; max-width: 42rem; margin: 2rem 0 0 auto; font-size: clamp(1.15rem, 2vw, 2rem); line-height: 1.13; letter-spacing: -.03em; }
 .work-section, .cv-section { padding: 8rem 3vw; border-bottom: 1px solid var(--line); }
@@ -254,15 +238,14 @@ footer p { margin: 0; }
   mix-blend-mode: screen;
   filter: hue-rotate(-24deg) saturate(.94) brightness(.96);
 }
-.doodle-name {
-  top: 50%;
-  left: 29%;
-  z-index: 3;
-  width: min(68vw, 66rem);
+.doodle-hero-corner {
+  right: clamp(-32rem, -30vw, -15rem);
+  bottom: clamp(-34rem, -32vw, -17rem);
+  z-index: 1;
+  width: clamp(32rem, 45vw, 48rem);
   aspect-ratio: 1868 / 1722;
-  transform: translate(-50%, -50%);
 }
-.doodle-name img {
+.doodle-hero-corner img {
   top: -2.56%;
   left: -4.39%;
   width: 109.64%;
@@ -294,7 +277,7 @@ footer p { margin: 0; }
 .doodle-cv-line img { top: -24.79%; left: -1176.19%; width: 4876.19%; }
 .doodle-contact-arrow {
   top: 9%;
-  right: 25%;
+  right: 34%;
   z-index: 3;
   width: clamp(11rem, 18vw, 18rem);
   aspect-ratio: 873 / 1031;
@@ -324,16 +307,10 @@ footer p { margin: 0; }
   .work-progress p { margin-top: .65rem; }
   .contact-section h2 { margin-bottom: 8rem; }
   .contact-grid { grid-template-columns: 1fr; }
-  .hero-title-intersection {
-    -webkit-mask-size: 114vw auto;
-    mask-size: 114vw auto;
-    -webkit-mask-position: -13.56vw calc(50% - 50.39vw);
-    mask-position: -13.56vw calc(50% - 50.39vw);
-  }
-  .doodle-name { top: 50%; left: 43%; width: 104vw; }
+  .doodle-hero-corner { right: -21rem; bottom: -23rem; width: 30rem; }
   .doodle-stars { top: 1rem; right: -.7rem; width: 4rem; }
   .doodle-cv-line { top: 2.1rem; left: -.8rem; width: .35rem; }
-  .doodle-contact-arrow { top: 18%; right: 18%; width: 9rem; transform: rotate(6deg); }
+  .doodle-contact-arrow { top: 18%; right: 30%; width: 9rem; transform: rotate(6deg); }
   footer { padding-inline: 1.1rem; }
 }
 
