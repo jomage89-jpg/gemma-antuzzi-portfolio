@@ -77,6 +77,12 @@ export default function Home() {
           </span>
           <h1 id="hero-title">
             Gemma<br />Antuzzi
+            <span className="hero-title-intersection" aria-hidden="true">
+              Gemma<br />Antuzzi
+            </span>
+            <span className="hero-title-intersection hero-title-intersection-deep" aria-hidden="true">
+              Gemma<br />Antuzzi
+            </span>
           </h1>
         </div>
         <p className="hero-role">

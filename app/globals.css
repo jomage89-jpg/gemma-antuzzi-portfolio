@@ -35,8 +35,9 @@ img { display: block; width: 100%; }
   min-height: 64px;
   padding: 0 3vw;
   border-bottom: 1px solid var(--line);
-  background: color-mix(in srgb, var(--paper) 92%, transparent);
-  backdrop-filter: blur(14px);
+  background: rgb(17 17 15 / 42%);
+  -webkit-backdrop-filter: blur(18px) saturate(1.15);
+  backdrop-filter: blur(18px) saturate(1.15);
 }
 .wordmark { font-weight: 700; letter-spacing: -.025em; }
 nav { display: flex; gap: 1.7rem; font-size: .82rem; }
@@ -65,7 +66,25 @@ nav a:hover, nav a:focus-visible, footer a:hover, footer a:focus-visible { text-
   position: relative;
   grid-column: 1 / -1;
 }
-.hero-name-lockup h1 { position: relative; z-index: 2; }
+.hero-name-lockup h1 { position: relative; z-index: 4; }
+.hero-title-intersection {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  color: #050504;
+  pointer-events: none;
+  -webkit-mask-image: url('/doodles/name-frame.png');
+  mask-image: url('/doodles/name-frame.png');
+  -webkit-mask-mode: luminance;
+  mask-mode: luminance;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: min(74.55vw, 72.36rem) auto;
+  mask-size: min(74.55vw, 72.36rem) auto;
+  -webkit-mask-position: calc(29% - min(36.99vw, 35.9rem)) calc(50% - min(32.95vw, 31.98rem));
+  mask-position: calc(29% - min(36.99vw, 35.9rem)) calc(50% - min(32.95vw, 31.98rem));
+}
+.hero-title-intersection-deep { z-index: 2; }
 .hero-role { grid-column: 1 / -1; margin: .6rem 0 0; font-size: clamp(1.5rem, 3vw, 3.2rem); line-height: 1; letter-spacing: -.04em; }
 .intro { grid-column: 2; max-width: 42rem; margin: 2rem 0 0 auto; font-size: clamp(1.15rem, 2vw, 2rem); line-height: 1.13; letter-spacing: -.03em; }
 .work-section, .cv-section { padding: 8rem 3vw; border-bottom: 1px solid var(--line); }
@@ -242,13 +261,11 @@ footer p { margin: 0; }
   width: min(68vw, 66rem);
   aspect-ratio: 1868 / 1722;
   transform: translate(-50%, -50%);
-  mix-blend-mode: normal;
 }
 .doodle-name img {
   top: -2.56%;
   left: -4.39%;
   width: 109.64%;
-  mix-blend-mode: difference;
 }
 .doodle-underline-target { position: relative; display: inline-block; }
 .doodle-underline {
@@ -307,6 +324,12 @@ footer p { margin: 0; }
   .work-progress p { margin-top: .65rem; }
   .contact-section h2 { margin-bottom: 8rem; }
   .contact-grid { grid-template-columns: 1fr; }
+  .hero-title-intersection {
+    -webkit-mask-size: 114vw auto;
+    mask-size: 114vw auto;
+    -webkit-mask-position: -13.56vw calc(50% - 50.39vw);
+    mask-position: -13.56vw calc(50% - 50.39vw);
+  }
   .doodle-name { top: 50%; left: 43%; width: 104vw; }
   .doodle-stars { top: 1rem; right: -.7rem; width: 4rem; }
   .doodle-cv-line { top: 2.1rem; left: -.8rem; width: .35rem; }
