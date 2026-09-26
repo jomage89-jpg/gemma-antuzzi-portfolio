@@ -239,7 +239,7 @@ footer p { margin: 0; }
   filter: hue-rotate(-24deg) saturate(.94) brightness(.96);
 }
 .doodle-hero-corner {
-  top: clamp(-28rem, -24vw, -13rem);
+  top: clamp(-24rem, -20vw, -10rem);
   right: clamp(-24rem, -20vw, -11rem);
   z-index: 1;
   width: clamp(42rem, 58vw, 62rem);
