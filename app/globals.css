@@ -291,7 +291,7 @@ footer p { margin: 0; }
 }
 .doodle-stars img { top: -157.84%; left: -180.85%; width: 412.9%; }
 .doodle-cv-line {
-  top: -.2rem;
+  top: -1.7rem;
   left: -1.8rem;
   z-index: 3;
   width: .55rem;
@@ -332,8 +332,8 @@ footer p { margin: 0; }
   .contact-grid { grid-template-columns: 1fr; }
   .doodle-hero-corner { top: -8rem; right: -14rem; width: 28rem; }
   .doodle-stars { top: 1rem; right: -.7rem; width: 4rem; }
-  .doodle-cv-line { top: 2.1rem; left: -.8rem; width: .35rem; }
-  .doodle-contact-arrow { top: 14%; right: 24%; width: 9rem; transform: rotate(6deg); }
+  .doodle-cv-line { top: -1.8rem; left: -.8rem; width: .35rem; }
+  .doodle-contact-arrow { top: 14%; right: 2%; width: 9rem; transform: rotate(6deg); }
   footer { padding-inline: 1.1rem; }
 }
 
