@@ -50,6 +50,7 @@ nav a:hover, nav a:focus-visible, footer a:hover, footer a:focus-visible { text-
   min-height: calc(100vh - 64px);
   padding: 8vw 3vw 3vw;
   border-bottom: 1px solid var(--line);
+  isolation: isolate;
 }
 .eyebrow { margin: 0; font-size: .68rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
 .hero h1 {
@@ -63,17 +64,8 @@ nav a:hover, nav a:focus-visible, footer a:hover, footer a:focus-visible { text-
 .hero-name-lockup {
   position: relative;
   grid-column: 1 / -1;
-  isolation: isolate;
 }
-.hero-name-lockup h1 {
-  position: relative;
-  z-index: 2;
-  display: inline-block;
-  margin-left: -.06em;
-  padding: .03em .06em;
-  background: var(--paper);
-  box-shadow: 0 0 0 .045em var(--paper);
-}
+.hero-name-lockup h1 { position: relative; z-index: 2; }
 .hero-role { grid-column: 1 / -1; margin: .6rem 0 0; font-size: clamp(1.5rem, 3vw, 3.2rem); line-height: 1; letter-spacing: -.04em; }
 .intro { grid-column: 2; max-width: 42rem; margin: 2rem 0 0 auto; font-size: clamp(1.15rem, 2vw, 2rem); line-height: 1.13; letter-spacing: -.03em; }
 .work-section, .cv-section { padding: 8rem 3vw; border-bottom: 1px solid var(--line); }
@@ -246,12 +238,18 @@ footer p { margin: 0; }
 .doodle-name {
   top: 50%;
   left: 29%;
-  z-index: 1;
+  z-index: 3;
   width: min(68vw, 66rem);
   aspect-ratio: 1868 / 1722;
   transform: translate(-50%, -50%);
+  mix-blend-mode: normal;
 }
-.doodle-name img { top: -2.56%; left: -4.39%; width: 109.64%; }
+.doodle-name img {
+  top: -2.56%;
+  left: -4.39%;
+  width: 109.64%;
+  mix-blend-mode: difference;
+}
 .doodle-underline-target { position: relative; display: inline-block; }
 .doodle-underline {
   left: 0;
