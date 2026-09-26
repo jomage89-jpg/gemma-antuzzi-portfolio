@@ -154,7 +154,28 @@ nav a:hover, nav a:focus-visible, footer a:hover, footer a:focus-visible { text-
 .cv-heading { grid-template-columns: minmax(10rem, 1fr) 2fr 1fr; }
 .cv-title-lockup, .work-title-lockup, .contact-title-lockup { position: relative; isolation: isolate; }
 .cv-title-lockup h2, .work-title-lockup h2, .contact-title-lockup h2 { position: relative; z-index: 2; }
-.download-link { justify-self: end; padding-bottom: .35rem; border-bottom: 1px solid currentColor; font-size: .82rem; }
+.download-link {
+  justify-self: end;
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  padding: .85rem 1rem;
+  border: 1px solid var(--green);
+  background: var(--green);
+  color: #171715;
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  transition: color .2s ease, background-color .2s ease;
+}
+.download-link:hover, .download-link:focus-visible { background: transparent; color: var(--green); outline: none; }
+.text-arrow {
+  display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-variant-emoji: text;
+  line-height: 1;
+}
 .cv-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid #66645e; }
 .cv-block { min-height: 20rem; padding: 2rem 2rem 3rem 0; border-bottom: 1px solid #66645e; }
 .cv-block:nth-child(odd):not(.cv-profile) { padding-left: 2rem; border-left: 1px solid #66645e; }
@@ -297,7 +318,7 @@ footer p { margin: 0; }
   .work-section, .cv-section, .contact-section { padding: 5rem 1.1rem; }
   .section-heading, .cv-heading { display: block; }
   .section-heading h2 { margin: 2.2rem 0 1.6rem; }
-  .download-link { display: inline-block; margin-top: 1rem; }
+  .download-link { display: inline-flex; margin-top: 1rem; }
   .projects, .cv-grid { grid-template-columns: 1fr; }
   .project { min-height: 0; aspect-ratio: 1 / 1; }
   .project h3 { font-size: clamp(2.7rem, 13vw, 4.8rem); }
@@ -309,7 +330,7 @@ footer p { margin: 0; }
   .work-progress p { margin-top: .65rem; }
   .contact-section h2 { margin-bottom: 8rem; }
   .contact-grid { grid-template-columns: 1fr; }
-  .doodle-hero-corner { top: -25rem; right: -22rem; width: 36rem; }
+  .doodle-hero-corner { top: -8rem; right: -14rem; width: 28rem; }
   .doodle-stars { top: 1rem; right: -.7rem; width: 4rem; }
   .doodle-cv-line { top: 2.1rem; left: -.8rem; width: .35rem; }
   .doodle-contact-arrow { top: 14%; right: 24%; width: 9rem; transform: rotate(6deg); }

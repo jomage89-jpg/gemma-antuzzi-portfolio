@@ -103,7 +103,7 @@ export default function Home() {
             <h2 id="cv-title">Esperienza, formazione<br />e competenze.</h2>
           </div>
           <a className="download-link" href="/files/gemma-antuzzi-cv.pdf" download>
-            Scarica il CV PDF ↘
+            Scarica il CV PDF <span className="text-arrow" aria-hidden="true">↘︎</span>
           </a>
         </div>
 
@@ -131,7 +131,7 @@ export default function Home() {
             >
               <h4>Jonas Blue</h4>
               <p>Grafiche per Jonas Blue, Why Don’t We — Don’t Wake Me Up (Lyric Video).</p>
-              <span className="entry-link">Guarda il lyric video ↗</span>
+              <span className="entry-link">Guarda il lyric video <span className="text-arrow" aria-hidden="true">↗︎</span></span>
             </a>
           </div>
 
@@ -148,11 +148,11 @@ export default function Home() {
               <div>
                 <h4>Nemo Academy</h4>
                 <p>Corso di Cinema d’animazione · valutazione finale 29/30.</p>
-                <span className="entry-link">Guarda l’animation reel ↗</span>
+                <span className="entry-link">Guarda l’animation reel <span className="text-arrow" aria-hidden="true">↗︎</span></span>
               </div>
             </a>
             <div className="cv-entry split-entry"><span>2017–2022</span><div><h4>ISIS Benedetto Varchi, Montevarchi</h4><p>Liceo Artistico, indirizzo audiovisivo-multimediale · diploma 90/100.</p></div></div>
-            <div className="cv-entry split-entry"><span>Estate 2026</span><div><h4>Movimenti Digitali, Prato</h4><p>Corsi base e avanzato di stop motion; esperienza formativa con Monica Fibbi e Stefano Argentero.</p></div></div>
+            <div className="cv-entry split-entry"><span>Luglio 2026</span><div><h4>Movimenti Digitali, Prato</h4><p>Corsi base e avanzato di stop motion; esperienza formativa con Monica Fibbi e Stefano Argentero.</p></div></div>
           </div>
 
           <div className="cv-block">
@@ -165,7 +165,7 @@ export default function Home() {
             >
               <h4>IMPALESTRA tra Museo e Accademia</h4>
               <p>Interviste, documentazione, social media, documentario e meta-documentario. Il progetto è stato presentato a Expo 2025 Osaka e a Lo schermo dell’arte di Firenze.</p>
-              <span className="entry-link">Guarda il progetto a Expo 2025 Osaka ↗</span>
+              <span className="entry-link">Guarda il progetto a Expo 2025 Osaka <span className="text-arrow" aria-hidden="true">↗︎</span></span>
             </a>
             <a
               className="cv-entry linked-entry"
@@ -175,7 +175,7 @@ export default function Home() {
             >
               <h4>Interferenze Elettriche</h4>
               <p>Comunicazione, interviste e social media management; presentazione di Prompt: Melting nella seconda edizione.</p>
-              <span className="entry-link">Leggi l’articolo su Artribune ↗</span>
+              <span className="entry-link">Leggi l’articolo su Artribune <span className="text-arrow" aria-hidden="true">↗︎</span></span>
             </a>
           </div>
 
@@ -273,11 +273,11 @@ export default function Home() {
         <div className="contact-grid">
           <p>Disponibile per collaborazioni, progetti culturali e opportunità in ambito visual, video e comunicazione digitale.</p>
           <div className="contact-links">
-            <a className="contact-primary" href="mailto:gemmaantuzzi@gmail.com">gemmaantuzzi@gmail.com ↗</a>
+            <a className="contact-primary" href="mailto:gemmaantuzzi@gmail.com">gemmaantuzzi@gmail.com <span className="text-arrow" aria-hidden="true">↗︎</span></a>
             <span>Valdarno / Toscana</span>
             <div className="social-links">
-              <a href="https://www.linkedin.com/in/gemma-antuzzi-71831925a" target="_blank" rel="noreferrer">LinkedIn — Gemma Antuzzi ↗</a>
-              <a href="https://www.instagram.com/gemntz?stkn=MTZiNTVhenl1eGdzMQ%3D%3D&utm_source=qr" target="_blank" rel="noreferrer">Instagram — @gemntz ↗</a>
+              <a href="https://www.linkedin.com/in/gemma-antuzzi-71831925a" target="_blank" rel="noreferrer">LinkedIn — Gemma Antuzzi <span className="text-arrow" aria-hidden="true">↗︎</span></a>
+              <a href="https://www.instagram.com/gemntz?stkn=MTZiNTVhenl1eGdzMQ%3D%3D&utm_source=qr" target="_blank" rel="noreferrer">Instagram — @gemntz <span className="text-arrow" aria-hidden="true">↗︎</span></a>
             </div>
           </div>
         </div>
@@ -285,7 +285,7 @@ export default function Home() {
 
       <footer>
         <p>Gemma Antuzzi © 2026</p>
-        <a href="#top">Torna su ↑</a>
+        <a href="#top">Torna su <span className="text-arrow" aria-hidden="true">↑︎</span></a>
       </footer>
     </main>
   );
