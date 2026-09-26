@@ -244,6 +244,7 @@ footer p { margin: 0; }
   z-index: 1;
   width: clamp(42rem, 58vw, 62rem);
   aspect-ratio: 1868 / 1722;
+  transform: scaleY(-1);
 }
 .doodle-hero-corner img {
   top: -2.56%;
