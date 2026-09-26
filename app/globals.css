@@ -244,7 +244,7 @@ footer p { margin: 0; }
   z-index: 1;
   width: clamp(42rem, 58vw, 62rem);
   aspect-ratio: 1868 / 1722;
-  transform: scaleY(-1);
+  transform: scale(-1, -1);
 }
 .doodle-hero-corner img {
   top: -2.56%;
@@ -260,6 +260,7 @@ footer p { margin: 0; }
   aspect-ratio: 1630 / 44;
 }
 .doodle-underline img { top: -1972.7%; left: -8.65%; width: 117.79%; }
+.hero-role .doodle-underline { bottom: -.35em; }
 .doodle-stars {
   top: -2.4rem;
   right: -3.3rem;
