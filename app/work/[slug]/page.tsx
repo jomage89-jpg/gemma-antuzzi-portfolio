@@ -1,7 +1,5 @@
 import Link from 'next/link';
 
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
-
 const projects = {
   'prompt-melting': {
     number: '01',
@@ -71,16 +69,16 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
   return (
     <main className="project-detail-page">
       <header className="site-header">
-        <Link className="wordmark" href={`${basePath}/`}>Gemma Antuzzi</Link>
+        <Link className="wordmark" href={`/`}>Gemma Antuzzi</Link>
         <nav aria-label="Navigazione principale">
-          <Link href={`${basePath}/#work`}>Selected Work</Link>
-          <Link href={`${basePath}/#cv`}>CV</Link>
-          <Link href={`${basePath}/#contact`}>Contatti</Link>
+          <Link href={`/#work`}>Selected Work</Link>
+          <Link href={`/#cv`}>CV</Link>
+          <Link href={`/#contact`}>Contatti</Link>
         </nav>
       </header>
 
       <section className="detail-hero">
-        <Link className="back-link" href={`${basePath}/#work`}>← Torna ai lavori selezionati</Link>
+        <Link className="back-link" href={`/#work`}>← Torna ai lavori selezionati</Link>
         <p className="eyebrow">Selected Work / {project.number}</p>
         <h1>{project.title}</h1>
         <p className="detail-category">{project.category}</p>
@@ -108,10 +106,10 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
       </section>
 
       <nav className="detail-pagination" aria-label="Navigazione tra progetti">
-        {previous ? <Link href={`${basePath}/work/${previous}/`}>← {projects[previous].title}</Link> : <span />}
-        {next ? <Link href={`${basePath}/work/${next}/`}>{projects[next].title} →</Link> : <Link href={`${basePath}/#work`}>Tutti i progetti ↗</Link>}
+        {previous ? <Link href={`/work/${previous}/`}>← {projects[previous].title}</Link> : <span />}
+        {next ? <Link href={`/work/${next}/`}>{projects[next].title} →</Link> : <Link href={`/#work`}>Tutti i progetti ↗</Link>}
       </nav>
-      <footer><p>Gemma Antuzzi © 2026</p><Link href={`${basePath}/#top`}>Torna alla home ↑</Link></footer>
+      <footer><p>Gemma Antuzzi © 2026</p><Link href={`/#top`}>Torna alla home ↑</Link></footer>
     </main>
   );
 }
