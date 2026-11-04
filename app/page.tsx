@@ -118,11 +118,6 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="work-progress">
-          <span>Archivio in evoluzione</span>
-          <p>Nuovi progetti e materiali verranno aggiunti nel tempo.</p>
-        </div>
-
         <div className="projects">
           {projects.map((project) => (
             <a
