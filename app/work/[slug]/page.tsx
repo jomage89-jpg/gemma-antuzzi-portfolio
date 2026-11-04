@@ -1,5 +1,7 @@
 import Link from 'next/link';
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
+
 const projects = {
   'prompt-melting': {
     number: '01',
