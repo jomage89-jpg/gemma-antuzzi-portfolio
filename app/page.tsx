@@ -4,6 +4,7 @@ const asset = (path: string) => `${publicBasePath}${path}`;
 const projects = [
   {
     title: 'Prompt: Melting',
+    slug: 'prompt-melting',
     fields: 'IA · video · flipbook · installazione',
     description:
       'Un video generato a partire da fotografie dell’artista viene degradato e trasformato in una sequenza bicromatica. Il lavoro passa dallo schermo a due dispositivi fisici: una proiezione su carta e un flipbook che rende la visione manuale, rapida e instabile.',
@@ -12,6 +13,7 @@ const projects = [
   },
   {
     title: 'BratGreen',
+    slug: 'bratgreen',
     fields: 'Ambiente digitale · animazione 2D · interazione',
     description:
       'Illustrazione interattiva in HTML composta da quattro gatti animati frame by frame. Il clic su ogni personaggio attiva movimento e musica: senza la presenza dell’utente la composizione resta statica e incompleta.',
@@ -20,6 +22,7 @@ const projects = [
   },
   {
     title: 'Di Passaggio',
+    slug: 'di-passaggio',
     fields: 'Installazione interattiva · elettronica · spazio',
     description:
       'Un sistema di LED e materiali riflettenti rileva la presenza umana e la traduce in una risposta luminosa. Lo spettatore entra così nel funzionamento dell’opera e rende visibile il proprio passaggio nello spazio.',
@@ -28,6 +31,7 @@ const projects = [
   },
   {
     title: 'Negligenza a circuito chiuso',
+    slug: 'negligenza-a-circuito-chiuso',
     fields: 'Google Street View · found imagery · libro d’artista',
     description:
       'Una ricerca dentro Google Street View raccoglie anomalie e incoerenze dell’anonimizzazione. Le immagini diventano un libro di frammenti che il lettore deve ricomporre, interrogando il confine tra mappatura, sorveglianza ed esposizione.',
@@ -66,8 +70,8 @@ export default function Home() {
           Gemma Antuzzi
         </a>
         <nav aria-label="Navigazione principale">
-          <a href="#cv">CV</a>
           <a href="#work">Work</a>
+          <a href="#cv">CV</a>
           <a href="#contact">Contatti</a>
         </nav>
       </header>
@@ -94,6 +98,59 @@ export default function Home() {
         <span className="doodle-crop doodle-hero-corner" aria-hidden="true">
           <img src={asset('/doodles/name-frame.png')} alt="" />
         </span>
+      </section>
+
+      <section className="work-section" id="work" aria-labelledby="work-title">
+        <div className="section-heading">
+          <p className="eyebrow">Selected Work</p>
+          <div className="work-title-lockup">
+            <h2 id="work-title">
+              <span className="doodle-underline-target">
+                Lavori selezionati
+                <span className="doodle-crop doodle-underline" aria-hidden="true">
+                  <img src={asset('/doodles/underline.png')} alt="" />
+                </span>
+              </span>
+            </h2>
+            <span className="doodle-crop doodle-stars" aria-hidden="true">
+              <img src={asset('/doodles/stars.png')} alt="" />
+            </span>
+          </div>
+        </div>
+
+        <div className="work-progress">
+          <span>Archivio in evoluzione</span>
+          <p>Nuovi progetti e materiali verranno aggiunti nel tempo.</p>
+        </div>
+
+        <div className="projects">
+          {projects.map((project) => (
+            <a
+              href={`${publicBasePath}/work/${project.slug}/`}
+              className={`project project-${project.tone}`}
+              key={project.title}
+              aria-label={`Scopri ${project.title}. ${project.fields}`}
+            >
+              <video
+                className="project-media"
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+                aria-hidden="true"
+                tabIndex={-1}
+              >
+                <source src={project.media} type="video/mp4" />
+              </video>
+              <div className="project-summary">
+                <h3>{project.title}</h3>
+                <p className="project-fields">{project.fields}</p>
+              </div>
+              <p className="project-description">{project.description}</p>
+            </a>
+          ))}
+        </div>
       </section>
 
       <section className="cv-section" id="cv" aria-labelledby="cv-title">
@@ -202,59 +259,6 @@ export default function Home() {
             <div><span>Italiano</span><strong>Madrelingua</strong></div>
             <div><span>Inglese</span><strong>B2 Cambridge — certificato</strong></div>
           </div>
-        </div>
-      </section>
-
-      <section className="work-section" id="work" aria-labelledby="work-title">
-        <div className="section-heading">
-          <p className="eyebrow">Selected Work</p>
-          <div className="work-title-lockup">
-            <h2 id="work-title">
-              <span className="doodle-underline-target">
-                Lavori selezionati
-                <span className="doodle-crop doodle-underline" aria-hidden="true">
-                  <img src={asset('/doodles/underline.png')} alt="" />
-                </span>
-              </span>
-            </h2>
-            <span className="doodle-crop doodle-stars" aria-hidden="true">
-              <img src={asset('/doodles/stars.png')} alt="" />
-            </span>
-          </div>
-        </div>
-
-        <div className="work-progress">
-          <span>Archivio in evoluzione</span>
-          <p>Nuovi progetti e materiali verranno aggiunti nel tempo.</p>
-        </div>
-
-        <div className="projects">
-          {projects.map((project) => (
-            <article
-              className={`project project-${project.tone}`}
-              key={project.title}
-              tabIndex={0}
-              aria-label={`${project.title}. ${project.fields}. ${project.description}`}
-            >
-              <video
-                className="project-media"
-                autoPlay
-                muted
-                loop
-                playsInline
-                preload="metadata"
-                aria-hidden="true"
-                tabIndex={-1}
-              >
-                <source src={project.media} type="video/mp4" />
-              </video>
-              <div className="project-summary">
-                <h3>{project.title}</h3>
-                <p className="project-fields">{project.fields}</p>
-              </div>
-              <p className="project-description">{project.description}</p>
-            </article>
-          ))}
         </div>
       </section>
 
